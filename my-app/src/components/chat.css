@@ -1,0 +1,57 @@
+/* Add this to your App.css or a separate CSS file */
+.typing-animation {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #007bff;
+    animation: blink 0.7s infinite step-start;
+  }
+  
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  .message .bot-text {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #007bff; /* Cursor-like effect */
+    width: 0;
+    animation: typing 3s steps(30) forwards; /* Adjust typing speed as needed */
+  }
+  
+  @keyframes typing {
+    100% {
+      width: 100%;
+    }
+  }
+
+  /* Add this to your CSS file */
+
+
+  @media (width: 768px) {
+    .card-footer {
+      position: static; /* Allow footer to be part of the flow on larger screens */
+    }
+  
+    .input-group {
+      width: 100%; /* Keep the input group full width */
+    }
+  
+    .input-group input {
+      width: calc(100% - 60px); /* Ensure the input takes most of the space */
+    }
+  
+    .input-group button {
+      width: 60px; /* Keep the button fixed width */
+    }
+  }
+  
+  
